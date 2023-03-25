@@ -89,7 +89,7 @@ func compile(args compileArgs) error {
 			"-MF"+depFile.Name(),
 		)
 	}
-
+	fmt.Printf("[Dante] what bpf2go run: %s\n", cmd.String())
 	if err := cmd.Run(); err != nil {
 		return fmt.Errorf("can't execute %s: %s", args.cc, err)
 	}
